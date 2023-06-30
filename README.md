@@ -6,7 +6,7 @@ By executing
 ```
 python predict.py <input-image> <output-image> 
 ```
-the binarization model is applied to the <input-image> and the result is saved to the <output-image>
+the binarization model is applied to the *input-image* and the result is saved to the *output-image*
 
 The user can get help on executing the prediction by doing
 ```
