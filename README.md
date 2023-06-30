@@ -20,7 +20,7 @@ python unit_test.py
 ```
 
 ## Project structure
-The project contains the Tensorflow model for the ** Dilated Multires Visual Attention Unet** binarization deep learning architecture.
+The project contains the Tensorflow model for the **Dilated Multires Visual Attention Unet** binarization deep learning architecture.
 Only the prediction code is included, for the purposes of the competition.
 
 ## Model complexity
