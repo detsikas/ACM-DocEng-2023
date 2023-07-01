@@ -27,7 +27,7 @@ input_shape = [target_image_size, target_image_size, 3]
 # Load the model and its weights
 model = dilated_multires_visual_attention(
     input_shape=input_shape, starting_filters=16, with_dropout=True)
-model.load_weights(os.path.join('model', 'weights'))
+model.load_weights(os.path.join('model', 'weights')).expect_partial()
 
 
 def reconstruct_image(predictions_, h_anchors, w_anchors, whole_image_shape):
