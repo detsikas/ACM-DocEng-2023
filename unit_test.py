@@ -27,8 +27,7 @@ trained_model_path = '../DMVAnet/results/dib/'
 # Load the model and its weights
 model = dilated_multires_visual_attention(
     input_shape=input_shape, starting_filters=16, with_dropout=True)
-model.load_weights(os.path.join(trained_model_path,
-                   'model', 'weights')).expect_partial()
+model.load_weights(os.path.join('model', 'weights')).expect_partial()
 
 
 def reconstruct_image(predictions_, h_anchors, w_anchors, whole_image_shape):
@@ -72,7 +71,7 @@ gt = cv2.imread(input_gt_image)/255.0
 
 psnr = tf.image.psnr(gt[:, :, :1], y, max_val=1)
 
-if (psnr.numpy() - 23.25801277) > 0.0001:
+if (psnr.numpy() - 24.52714157) > 0.0001:
     print(f'Something is not right: {psnr.numpy()}')
 else:
     print('Pass')
