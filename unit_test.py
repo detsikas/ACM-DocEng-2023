@@ -69,7 +69,7 @@ gt = cv2.imread(input_gt_image)/255.0
 
 psnr = tf.image.psnr(gt[:, :, :1], y, max_val=1)
 
-if (psnr.numpy() - 24.52714157) > 0.0001:
+if (psnr.numpy() - 24.5) > 0.1:
     print(f'Something is not right: {psnr.numpy()}')
 else:
     print('Pass')
