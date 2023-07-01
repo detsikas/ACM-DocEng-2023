@@ -22,8 +22,6 @@ if not os.path.exists(input_gt_image) or not os.path.isfile(input_gt_image):
 target_image_size = 256
 input_shape = [target_image_size, target_image_size, 3]
 
-trained_model_path = '../DMVAnet/results/dib/'
-
 # Load the model and its weights
 model = dilated_multires_visual_attention(
     input_shape=input_shape, starting_filters=16, with_dropout=True)
